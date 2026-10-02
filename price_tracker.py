@@ -33,3 +33,28 @@ try:
 
 except Exception as e:
     print(f"An error occurred: {e}")
+import subprocess
+import os
+
+def push_updates_to_github():
+    try:
+        # Navigate to the project directory if necessary
+        os.chdir(r"C:\Users\joshb\.codex")
+        
+        # Stage the updated CSV report
+        subprocess.run(["git", "add", "market_price_report.csv"], check=True)
+        
+        # Commit changes (check=False avoids throwing an error if prices haven't changed)
+        subprocess.run(["git", "commit", "-m", "Auto-update market price report"], check=False)
+        
+        # Push to main branch on GitHub
+        subprocess.run(["git", "push", "origin", "main"], check=True)
+        print("Successfully pushed live price updates to GitHub Pages!")
+        
+    except Exception as e:
+        print(f"Failed to push updates to GitHub: {e}")
+
+# Call the function after your CSV is generated/updated
+if __name__ == "__main__":
+    # ... your price extraction logic here ...
+    push_updates_to_github()
