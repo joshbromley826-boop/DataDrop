@@ -1,0 +1,48 @@
+# Temporary, Sandbox & System Guard Files
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.guard
+*.tmp
+.tmp/
+tmp/
+cache/
+logs_2.*
+.sandbox*
+.sandbox-secrets/
+.desktop-created
+.codex-global-state*
+
+# Configs, Secrets & Logs
+config.toml
+auth.json
+installation_id
+cap_sid
+models_cache.json
+session_index.jsonl
+sessions/
+skills/
+plugins/
+sqlite/
+thread-writer-locks/
+vendor_imports/
+computer-use/
+
+# Executables & Secondary Scripts
+run_my_tracker.bat
+convert_currency.py
+market_simulator.py
+notion_sync.py
+payment_tracker.py
+portfolio_tracker.py
+saas_billing.py
+
+# Unrelated CSV Reports
+investment_portfolio_report.csv
+live_portfolio_uk.csv
+thread_history_1.sqlite
+
+# OS Specific Files
+Thumbs.db
+Desktop.ini
+.DS_Store
